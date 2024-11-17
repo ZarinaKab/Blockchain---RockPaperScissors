@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <p>Place your bet and play against the house!</p>
+
+        <div class="game-buttons">
+            <button id="rock" class="game-button">Rock</button>
+            <button id="paper" class="game-button">Paper</button>
+            <button id="scissors" class="game-button">Scissors</button>
+        </div>
+
+        <button id="depositBtn">Deposit 0.0001 ETH</button>
+
+        <div id="gameResult">
+            <p id="resultMessage">Choose your move!</p>
+        </div>
+
+        <div class="wallet-info">
+            <p>Account: <span id="account"></span></p>
+            <p>Contract Balance: <span id="contractBalance"></span> ETH</p>
+        </div>
+
+        <div>
+            <button id="connectBtn" class="connect-button">Connect MetaMask</button>
+        </div>
+
+        <div>
+            <h2>Owner Controls</h2>
+            <label for="withdrawAmount">Withdraw Amount (ETH):</label>
+            <input type="number" id="withdrawAmount" step="0.0001" min="0" placeholder="0.0001">
+            <button id="withdrawBtn" class="connect-button">Withdraw Funds</button>
+            <p id="withdrawMessage"></p>
+        </div>
+
+        <button id="checkBalanceBtn" class="connect-button">Check Balance</button>
+        <button id="checkHistoryBtn" class="connect-button">Check History</button>
+
+        <div class="game-history">
+            <h2>Game History</h2>
+            <ul id="history"></ul>
+        </div>
+
+        <p id="logMessage"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
